@@ -14,7 +14,7 @@
                 Symbol symbol = new Symbol();
                 symbol.SetSymbol(textBox1.Text[0]);
                 labelResult.Text = symbol.GetSymbolAndCode();
-            }  
+            }
             else
             {
                 MessageBox.Show(
