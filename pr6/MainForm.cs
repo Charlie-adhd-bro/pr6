@@ -32,12 +32,16 @@ namespace pr6
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Pr6_4 mainForm = new();
+            mainForm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            //this.Hide();
+            //Pr6_5 mainForm = new();
+            //mainForm.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

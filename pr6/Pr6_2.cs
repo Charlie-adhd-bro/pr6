@@ -53,15 +53,23 @@
         {
             int step = start <= end ? 1 : -1;
             int length = Math.Abs(end - start) + 1;
-            string result = "";
+            string result = "Результат:\n";
 
             for (int i = 0; i < length; i++)
             {
                 char current = (char)(start + i * step);
-                result += current + " ";
+                
+                if (i == length - 1)
+                {
+                    result += current;
+                }
+                else
+                {
+                    result += current + ", ";
+                }
             }
 
-            label.Text = result.Trim();
+            label.Text = result;
         }
     }
 }

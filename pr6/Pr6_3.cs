@@ -12,13 +12,13 @@
             if (int.TryParse(textBox1.Text, out int num1) &&
                 int.TryParse(textBox2.Text, out int num2))
             {
-                NumbersHolder num = new NumbersHolder();
+                Numbers num = new Numbers();
                 labelResult1.Text = "Конструктор без аргументов:\n" + num.GetValues();
 
-                NumbersHolder oneNum = new NumbersHolder(num1);
+                Numbers oneNum = new Numbers(num1);
                 labelResult2.Text = "Конструктор с одним аргументом:\n" + oneNum.GetValues();
 
-                NumbersHolder twoNums = new NumbersHolder(num1, num2);
+                Numbers twoNums = new Numbers(num1, num2);
                 labelResult3.Text = "Конструктор с двумя аргументами:\n" + twoNums.GetValues();
             }
             else
@@ -48,24 +48,24 @@
             new MainForm().Show();
         }
 
-        class NumbersHolder
+        class Numbers
         {
             private int number1;
             private int number2;
 
-            public NumbersHolder()
+            public Numbers()
             {
                 number1 = 0;
                 number2 = 0;
             }
 
-            public NumbersHolder(int num)
+            public Numbers(int num)
             {
                 number1 = num;
                 number2 = num;
             }
 
-            public NumbersHolder(int num1, int num2)
+            public Numbers(int num1, int num2)
             {
                 number1 = num1;
                 number2 = num2;
