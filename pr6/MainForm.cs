@@ -39,19 +39,23 @@ namespace pr6
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //Pr6_5 mainForm = new();
-            //mainForm.Show();
+            this.Hide();
+            Pr6_5 mainForm = new();
+            mainForm.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Pr6_6 mainForm = new();
+            mainForm.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Pr6_7 mainForm = new();
+            mainForm.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)

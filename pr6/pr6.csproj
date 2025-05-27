@@ -9,8 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="Pr6_7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pr6_6.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Pr6_5.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Update="Pr6_4.cs">
       <SubType>Form</SubType>

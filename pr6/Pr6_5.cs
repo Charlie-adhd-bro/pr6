@@ -9,21 +9,35 @@
 
         private void buttonResult_Click(object sender, EventArgs e)
         {
-            bool success = false;
+
+            labelResult1.Text = "";
+            labelResult2.Text = "";
 
             if (int.TryParse(textBox1.Text, out int num))
             {
+
                 NumberHolder numberHolder = new NumberHolder(num);
-                labelResult1.Text = "Констурктор";
-                success = true;
+                labelResult1.Text = "Конструктор с аргументом: " + numberHolder.GetNumber();
+
+               
+
+                numberHolder.SetNumber(num);
+                labelResult2.Text += "Метод с аргументом: " + numberHolder.GetNumber();
+
+                
             }
 
-           
-
-            if (!success)
+            else
             {
+
+                NumberHolder numberHolder = new NumberHolder();
+                labelResult1.Text += "\nКонструктор без аргумента: " + numberHolder.GetNumber();
+
+                numberHolder.SetNumber();
+                labelResult2.Text += "\nМетод без аргумента: " + numberHolder.GetNumber();
+
                 MessageBox.Show(
-                    "Введите корректные значения",
+                    "Был вызван конструктор по умолчанию",
                     "Ошибка ввода",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
@@ -35,6 +49,7 @@
         {
             textBox1.Clear();
             labelResult1.Text = "";
+            labelResult2.Text = "";
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -57,18 +72,15 @@
                 number = CheckNumber(num);
             }
 
-            public void SetNumber(int? num = null)
+            public void SetNumber(int num)
             {
-                if (num.HasValue)
-                {
-                    number = CheckNumber(num.Value);
-                }
-                else
-                {
-                    number = 0;
-                }
+                number = CheckNumber(num);
             }
-          
+            public void SetNumber()
+            {
+                number = 0;
+            }
+
             private int CheckNumber(int num)
             {
                 return num > 100 ? 100 : num;

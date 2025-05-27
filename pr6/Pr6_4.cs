@@ -64,7 +64,6 @@
             }
             public CharAndNumber(double num)
             { 
-
                 character = (char)(int)Math.Truncate(num);
 
                 double fractionalPart = num - Math.Truncate(num);
