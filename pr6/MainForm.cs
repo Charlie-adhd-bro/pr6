@@ -60,12 +60,16 @@ namespace pr6
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Pr6_8 mainForm = new();
+            mainForm.Show();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Pr6_9 mainForm = new();
+            mainForm.Show();
         }
     }
 }

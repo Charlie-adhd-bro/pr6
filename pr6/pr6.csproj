@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="Pr6_9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pr6_8.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Pr6_7.cs">
       <SubType>Form</SubType>
     </Compile>
